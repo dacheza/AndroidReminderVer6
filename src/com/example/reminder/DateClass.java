@@ -1,4 +1,5 @@
 package com.example.reminder;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,19 +10,19 @@ import java.util.Date;
 public class DateClass {
 
 
-/*Инициализация  листов в виде String */
+/*�?нициализация  листов в виде String */
     static ArrayList<String> listeGoldString = new ArrayList<String>();
     static ArrayList<String> listeBlueString = new ArrayList<String>();
     static ArrayList<String> listeGreenString = new ArrayList<String>();
     static ArrayList<String> listeBlackString = new ArrayList<String>();
 
-    /* Инициализация  отсортированных по месяцах листов*/
+    /* �?нициализация  отсортированных по месяцах листов*/
     static ArrayList<Date> listeGoldSearch = new ArrayList<Date>();
     static ArrayList<Date> listeBlueSearch = new ArrayList<Date>();
    static ArrayList<Date> listeGreenSearch = new ArrayList<Date>();
     static ArrayList<Date> listeBlackSearch = new ArrayList<Date>();
 
-    /*Инициализация отсортированных листов в виде Date */
+    /*�?нициализация отсортированных листов в виде Date */
     ArrayList<Date> listeGold = new ArrayList<Date>();
     ArrayList<Date> listeBlue = new ArrayList<Date>();
     ArrayList<Date> listeBlack = new ArrayList<Date>();
