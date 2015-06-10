@@ -49,30 +49,30 @@ public class OutActivity extends Activity {
 
         textView1.setText("Aktuelle Zeit:  " + sDate + "  Müllabfuhr für das Monat :");
 
-        final ListView list_gold = (ListView) findViewById(R.id.listView);
-        final ArrayAdapter<String> adapter_gold = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DateClass.listeGoldString);
-        list_gold.setAdapter(adapter_gold);
+        final ListView listGold = (ListView) findViewById(R.id.listView);
+        final ArrayAdapter<String> adapterGold = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DateClass.listeGoldString);
+        listGold.setAdapter(adapterGold);
 
-        final ListView list_blue = (ListView) findViewById(R.id.listView2);
-        final ArrayAdapter<String> adapter_blue = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DateClass.listeBlueString);
-        list_blue.setAdapter(adapter_blue);
+        final ListView listBlue = (ListView) findViewById(R.id.listView2);
+        final ArrayAdapter<String> adapterBlue = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DateClass.listeBlueString);
+        listBlue.setAdapter(adapterBlue);
 
-        final ListView list_green = (ListView) findViewById(R.id.listView3);
-        final ArrayAdapter<String> adapter_green = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DateClass.listeGreenString);
-        list_green.setAdapter(adapter_green);
+        final ListView listGreen = (ListView) findViewById(R.id.listView3);
+        final ArrayAdapter<String> adapterGreen = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DateClass.listeGreenString);
+        listGreen.setAdapter(adapterGreen);
 
-        final ListView list_black = (ListView) findViewById(R.id.listView4);
-        final ArrayAdapter<String> adapter_black = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DateClass.listeBlackString);
-        list_black.setAdapter(adapter_black);
+        final ListView listBlack = (ListView) findViewById(R.id.listView4);
+        final ArrayAdapter<String> adapterBlack = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DateClass.listeBlackString);
+        listBlack.setAdapter(adapterBlack);
 
         button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                adapter_gold.clear();
-                adapter_blue.clear();
-                adapter_green.clear();
-                adapter_black.clear();
+                adapterGold.clear();
+                adapterBlue.clear();
+                adapterGreen.clear();
+                adapterBlack.clear();
                 finish();
             }
         });
