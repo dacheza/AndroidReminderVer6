@@ -28,11 +28,12 @@ import static android.graphics.BitmapFactory.decodeResource;
  */
 public class OutActivity extends Activity {
 
-    public  TextView textView;
+    public TextView textView;
     public Button button2;
     public Button button3;
     private static final int NOTIFY_ID = 101;
-  static  int temp = 0;
+    static int temp = 0;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +72,6 @@ public class OutActivity extends Activity {
         list_black.setAdapter(adapter_black);
 
 
-
         button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
 
@@ -90,12 +90,12 @@ public class OutActivity extends Activity {
         });
 
 
-        button3 =(Button)findViewById(R.id.button3);
+        button3 = (Button) findViewById(R.id.button3);
 
 
         for (Date ausgabe : DateClass.listeGoldSearch) {
 
-            if (cuurentTime.getDate()+1 == ausgabe.getDate()) {
+            if (cuurentTime.getDate() + 1 == ausgabe.getDate()) {
 
                 temp = 1;
 
@@ -107,7 +107,7 @@ public class OutActivity extends Activity {
 
         for (Date ausgabe : DateClass.listeGreenSearch) {
 
-            if (cuurentTime.getDate() +1 == ausgabe.getDate()) {
+            if (cuurentTime.getDate() + 1 == ausgabe.getDate()) {
                 temp = 2;
                 button3.setText("Grüne Tonne muss morgen raus");
 
@@ -170,7 +170,7 @@ public class OutActivity extends Activity {
             Context context = getApplicationContext();
             Resources res = context.getResources();
             NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
-          //  mBuilder.setSmallIcon(R.drawable.ic_launcher_cat);
+            //  mBuilder.setSmallIcon(R.drawable.ic_launcher_cat);
             mBuilder.setLargeIcon(decodeResource(res, R.drawable.ic_launcher_cat));
             mBuilder.setTicker("Du, faulenzer ;)");
             mBuilder.setContentTitle("Vergiss nicht !!!");
@@ -200,11 +200,7 @@ public class OutActivity extends Activity {
             mNotificationManager.notify(NOTIFY_ID, mBuilder.build());
 
 
-
-
         }
-
-
 
 
         if (temp == 3) {
@@ -252,9 +248,7 @@ public class OutActivity extends Activity {
         }
 
 
-
-    }}
-
     }
 }
+
 
