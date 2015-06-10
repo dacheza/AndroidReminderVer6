@@ -9,7 +9,6 @@ import android.util.Log;
  * Created by Oleksandra on 21.04.2015.
  */
 public class MyBroadReceiv extends BroadcastReceiver {
-
     final String LOG_TAG = "myLogs";
 
     public void onReceive(Context context, Intent intent) {

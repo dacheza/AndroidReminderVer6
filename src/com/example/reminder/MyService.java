@@ -1,8 +1,5 @@
 package com.example.reminder;
 
-/**
- * Created by Oleksandra on 21.04.2015.
- */
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -12,9 +9,11 @@ import android.os.IBinder;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Created by Oleksandra on 21.04.2015.
+ */
 public class MyService extends Service {
     NotificationManager nm;
-
 
     @Override
     public void onCreate() {
@@ -31,10 +30,8 @@ public class MyService extends Service {
 
         sendNotif();
 
-
         return super.onStartCommand(intent, flags, startId);
     }
-
 
     void sendNotif() {
         // 1-я часть

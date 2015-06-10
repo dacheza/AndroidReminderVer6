@@ -15,9 +15,7 @@ import android.widget.TextView;
         setContentView(R.layout.main);
     }
 }*/
-
 public class MainActivity extends Activity {
-
     public final static String FILE_NAME = "filename";
 
     /** Called when the activity is first created. */
@@ -38,7 +36,6 @@ public class MainActivity extends Activity {
     public void onClickStart(View v) {
         startService(new Intent(this, MyService.class));
     }
-
 
     public void onClickStop(View v) {
         stopService(new Intent(this, MyService.class));

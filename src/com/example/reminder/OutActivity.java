@@ -26,11 +26,11 @@ import static android.graphics.BitmapFactory.decodeResource;
  * Created by Oleksandra on 31.03.2015.
  */
 public class OutActivity extends Activity {
+    static int temp = 0;
+    private static final int NOTIFY_ID = 101;
     public TextView textView;
     public Button button2;
     public Button button3;
-    private static final int NOTIFY_ID = 101;
-    static int temp = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
