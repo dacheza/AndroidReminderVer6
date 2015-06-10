@@ -56,9 +56,6 @@ public class OutActivity extends Activity {
         list_gold.setAdapter(adapter_gold);
 
 
-
-
-
         final ListView list_blue = (ListView) findViewById(R.id.listView2);
         final ArrayAdapter<String> adapter_blue = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DateClass.liste_blue_String);
         list_blue.setAdapter(adapter_blue);
@@ -72,7 +69,6 @@ public class OutActivity extends Activity {
         final ListView list_black = (ListView) findViewById(R.id.listView4);
         final ArrayAdapter<String> adapter_black = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, DateClass.liste_black_String);
         list_black.setAdapter(adapter_black);
-
 
 
         button2 = (Button) findViewById(R.id.button2);
@@ -93,16 +89,16 @@ public class OutActivity extends Activity {
         });
 
 
-         button3 =(Button)findViewById(R.id.button3);
+        button3 = (Button) findViewById(R.id.button3);
 
         int temp = 0;
         for (Date ausgabe : DateClass.liste_gold_search) {
 
-            if (cuurentTime.getDate()+1 == ausgabe.getDate()) {
+            if (cuurentTime.getDate() + 1 == ausgabe.getDate()) {
 
                 temp = 1;
 
-               button3.setText("Gelbe und blaue Tonne mussen morgen raus ");
+                button3.setText("Gelbe und blaue Tonne mussen morgen raus ");
 
             }
         }
@@ -110,9 +106,9 @@ public class OutActivity extends Activity {
 
         for (Date ausgabe : DateClass.liste_green_search) {
 
-            if (cuurentTime.getDate() +1 == ausgabe.getDate()) {
+            if (cuurentTime.getDate() + 1 == ausgabe.getDate()) {
                 temp = 2;
-               button3.setText("Grüne Tonne muss morgen raus");
+                button3.setText("Grüne Tonne muss morgen raus");
 
             }
         }
@@ -121,7 +117,7 @@ public class OutActivity extends Activity {
 
             if (cuurentTime.getDate() + 1 == ausgabe.getDate()) {
                 temp = 3;
-               button3.setText("Schwarze Tonne muss morgen raus");
+                button3.setText("Schwarze Tonne muss morgen raus");
 
             }
         }
@@ -138,7 +134,7 @@ public class OutActivity extends Activity {
             mBuilder.setContentTitle("Vergiss nicht !!!");
             mBuilder.setContentText("Gelbe und blaue tonne sind morgen zu entleeren !!!");
             mBuilder.setDefaults(Notification.DEFAULT_ALL);
-           // mBuilder.setPriority(NotificationCompat.PRIORITY_MAX);
+            // mBuilder.setPriority(NotificationCompat.PRIORITY_MAX);
 // Creates an explicit intent for an Activity in your app
             Intent resultIntent = new Intent(this, OutActivity.class);
 
@@ -155,13 +151,13 @@ public class OutActivity extends Activity {
             PendingIntent resultPendingIntent =
                     stackBuilder.getPendingIntent(
                             0,
-                           PendingIntent.FLAG_UPDATE_CURRENT
+                            PendingIntent.FLAG_UPDATE_CURRENT
 
                     );
             mBuilder.setContentIntent(resultPendingIntent);
             NotificationManager mNotificationManager =
                     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-                  //  (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            //  (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 // mId allows you to update the notification later on.
             mNotificationManager.notify(NOTIFY_ID, mBuilder.build());
         }
@@ -170,7 +166,7 @@ public class OutActivity extends Activity {
         if (temp == 2) {
 
 
-          Context context = getApplicationContext();
+            Context context = getApplicationContext();
             Resources res = context.getResources();
             NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
             mBuilder.setSmallIcon(R.drawable.hungrycat);
@@ -179,7 +175,7 @@ public class OutActivity extends Activity {
             mBuilder.setContentTitle("Vergiss nicht !!!");
             mBuilder.setContentText("Güne tonne ist morgen zu entleeren !!!");
             mBuilder.setDefaults(Notification.DEFAULT_ALL);
-          //  mBuilder.setPriority(NotificationCompat.PRIORITY_MAX);
+            //  mBuilder.setPriority(NotificationCompat.PRIORITY_MAX);
 // Creates an explicit intent for an Activity in your app
             Intent resultIntent = new Intent(this, OutActivity.class);
 
@@ -204,11 +200,7 @@ public class OutActivity extends Activity {
             mNotificationManager.notify(NOTIFY_ID, mBuilder.build());
 
 
-
-
         }
-
-
 
 
         if (temp == 3) {
@@ -224,7 +216,7 @@ public class OutActivity extends Activity {
                             .setContentTitle("Vergiss nicht !!!")
                             .setContentText("Schwarze tonne ist morgen zu entleeren !!!")
                             .setDefaults(Notification.DEFAULT_ALL);
-                           // .setPriority(NotificationCompat.PRIORITY_MAX)
+            // .setPriority(NotificationCompat.PRIORITY_MAX)
 
 // Creates an explicit intent for an Activity in your app
             Intent resultIntent = new Intent(this, OutActivity.class);
@@ -245,7 +237,7 @@ public class OutActivity extends Activity {
                     );
             mBuilder.setContentIntent(resultPendingIntent);
             NotificationManager mNotificationManager =
-                   // (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                    // (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
                     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 // mId allows you to update the notification later on.
             mNotificationManager.notify(NOTIFY_ID, mBuilder.build());
@@ -256,6 +248,6 @@ public class OutActivity extends Activity {
         }
 
 
-
-    }}
+    }
+}
 
